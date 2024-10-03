@@ -3,7 +3,7 @@
         <Card class="w-3 h-auto">
             <template #header>
                 <div class="logo max-w-18rem mx-auto mt-4">
-                    <img ref="logo" class="w-full" src="@/assets/img/masarap-logo.png" alt="">
+                    <img ref="logo" class="w-full" src="@/assets/img/NRG-Logo.png" alt="">
                     <!-- <span class="logo-placeholder ml-3 text-center">LOGO</span> -->
                 </div>
             </template>
