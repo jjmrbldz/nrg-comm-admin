@@ -176,6 +176,15 @@ const router = createRouter({
       },
       component: () => import('@/views/ForwardURLView.vue')
     },
+    {
+      path: '/pointsettings',
+      name: 'pointsettings',
+      meta: {
+        title: 'Point Settings',
+        requiresAuth: true,
+      },
+      component: () => import('@/views/PoinSettingsView.vue')
+    },
   ]
 })
 

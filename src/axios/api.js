@@ -178,4 +178,8 @@ export const api = {
   getViewHistory    : (data)       => axiosInstance.post('viewhistory', data),
   getCommentList    : (data)       => axiosInstance.post('commentlist', data),
   deleteComment     : (data)       => axiosInstance.post('admindeletecomment', data),
+
+  // POINTS
+  getPointSettings    : (data)       => axiosInstance.post('getpointsettings', data),
+  updatePointSettings : (data)       => axiosInstance.post('updatepointsettings', data),
 };

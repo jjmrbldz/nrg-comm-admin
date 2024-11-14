@@ -921,6 +921,10 @@
     "Inquiry List": "문의 목록",
     "View Post": "게시물 보기",
 
+    "Minimum": "최소",
+    "Maximum": "최대",
+    "Point Settings": "포인트 설정",
+
 	"totalPageLang": "전체",
 	"loginError Lang!": "로그인 실패!"
   }

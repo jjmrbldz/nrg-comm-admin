@@ -277,6 +277,29 @@ export default {
                         // },
                     ]
                 },
+                {
+                    label: 'Settings',
+                    items: [
+                        {
+                            label: 'Point Settings',
+                            icon: 'mdi mdi-hexagram',
+                            route: '/pointsettings'
+                            // badge: 2
+                        },
+                        // {
+                        //     label: 'View History',
+                        //     icon: 'mdi mdi-eye-refresh',
+                        //     route: '/viewhistory'
+                        //     // badge: 2
+                        // },
+                        // {
+                        //     label: 'Comment List',
+                        //     icon: 'mdi mdi-comment',
+                        //     route: '/comments'
+                        //     // badge: 2
+                        // },
+                    ]
+                },
                 // {
                 //     separator: true
                 // },
