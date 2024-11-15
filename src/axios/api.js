@@ -182,4 +182,11 @@ export const api = {
   // POINTS
   getPointSettings    : (data)       => axiosInstance.post('getpointsettings', data),
   updatePointSettings : (data)       => axiosInstance.post('updatepointsettings', data),
+
+  // ACCREDITED
+  accreditedList    : (data)          => axiosInstance.post('accreditedlist', data),
+  getAccredited     : (data)          => axiosInstance.post('getaccredited', data),
+  updateAccredited  : (data)          => axiosInstance.post('updateaccredited', data),
+  addAccredited     : (data)          => axiosInstance.post('createaccredited', data),
+  deleteAccredited     : (data)          => axiosInstance.post('deleteaccredited', data),
 };

@@ -925,6 +925,10 @@
     "Maximum": "최대",
     "Point Settings": "포인트 설정",
 
+    "Settings": "설정",
+    "Accredited Settings": "인증 설정",
+    "Add/Edit Accredited": "인증 추가/수정",
+
 	"totalPageLang": "전체",
 	"loginError Lang!": "로그인 실패!"
   }

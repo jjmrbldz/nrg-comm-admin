@@ -14,6 +14,7 @@ const MODAL = {
     ReplyInquiry : defineAsyncComponent(() => import('./ReplyInquiryModal/ReplyInquiryModal.vue')),
     AddEditPopup : defineAsyncComponent(() => import('./AddEditPopupModal/AddEditPopupModal.vue')),
     ViewPost : defineAsyncComponent(() => import('./ViewPostModal/ViewPostModal.vue')),
+    AddEditAccredited : defineAsyncComponent(() => import('./AddEditAccreditedModal/AddEditAccreditedModal.vue')),
 }
 
 export default MODAL

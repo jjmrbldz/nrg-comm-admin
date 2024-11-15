@@ -1,18 +1,26 @@
 <template>
-    <div class="field">
-        <label>{{ $store.getters['languageStore/translate']('Minimum') }}</label>
-        <InputNumber type="name" v-model="params.min" :use-grouping="false" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" :max="100" class="w-full" :disabled="loading" />
-    </div>  
-    <div class="field">
-        <label>{{ $store.getters['languageStore/translate']('Maximum') }}</label>
-        <InputNumber type="name" v-model="params.max" :use-grouping="false" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" :max="100" class="w-full" :disabled="loading" />
-    </div>     
-    <Button class="mt-3 w-full" :label="$store.getters['languageStore/translate']('submitLang')" @click="submit" :loading="loading" />
-   
+    <div class="formgrid grid">
+        <div class="field col">
+            <label>{{ $store.getters['languageStore/translate']('Minimum') }}</label>
+            <InputNumber type="name" v-model="params.min" :use-grouping="false" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" :max="100" class="w-full" :disabled="loading" />
+        </div>  
+        <div class="field col">
+            <label>{{ $store.getters['languageStore/translate']('Maximum') }}</label>
+            <InputNumber type="name" v-model="params.max" :use-grouping="false" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" :max="100" class="w-full" :disabled="loading" />
+        </div>   
+        <div class="field col">
+            <label>&nbsp;</label>
+            <Button class="w-full" :label="$store.getters['languageStore/translate']('submitLang')" @click="submit" :loading="loading" />
+        </div>
+    </div>
+    <Divider />
+    <h3 class="mb-3">{{ $store.getters['languageStore/translate']('Accredited Settings') }}</h3>
+    <AccreditedList />
 </template>
 
 <script>
 import { api } from '@/axios/api';
+import AccreditedList from '@/components/List/AccreditedList.vue';
 
 export default {
     data() {
@@ -91,5 +99,8 @@ export default {
             }
         },
     },
+    components: {
+        AccreditedList,
+    }
 }
 </script>
