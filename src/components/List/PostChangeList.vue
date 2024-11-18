@@ -38,7 +38,7 @@
         </Column>
         <Column :header="this.$store.getters['languageStore/translate'](`typeLang`)" style="min-width: 100px">
             <template #body="{ data }">
-                <span>{{ data.post_type }}</span>
+                <span>{{ $store.getters['languageStore/translate'](`${data.post_type}`) }}</span>
             </template>
         </Column>
         <Column :header="this.$store.getters['languageStore/translate'](`Content`)" style="min-width: 100px">

@@ -933,6 +933,16 @@
     "Company": "회사",
     "Post Type": "게시 유형",
 
+	"Waiting": "대기 중",
+	"Approved": "승인",
+	"Rejected": "거부",
+
+	"Change": "변경",
+	"Trade": "거래",
+	"change": "변경",
+	"trade": "거래",
+	"All": "모두",
+
 	"totalPageLang": "전체",
 	"loginError Lang!": "로그인 실패!"
   }
