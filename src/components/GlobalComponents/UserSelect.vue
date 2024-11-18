@@ -1,5 +1,5 @@
 <template>
-    <Dropdown v-model="statusValue" filter :options="list" optionLabel="user_nickname" :optionValue="`${returnValue}`" placeholder="Select user" checkmark showClear :highlightOnSelect="false" class="w-full" />
+    <Dropdown v-model="statusValue" filter :options="list" optionLabel="tu_user_id" :optionValue="`${returnValue}`" placeholder="Select user" checkmark showClear :highlightOnSelect="false" class="w-full" />
 </template>
 
 <script>
@@ -12,11 +12,11 @@ export default {
             loading : false,
             list    : [],
             params: {
-                filter_user_id            : '',
-                filter_user_name          : '',
-                filter_user_nickname      : '',
-                page               : 1,
-                limit              : 100
+                tu_user_id  : '',
+                tu_status   : '',
+                orderby     : 'desc',
+                page        : "1",
+                limit       : "99999"
             }
         }
     },

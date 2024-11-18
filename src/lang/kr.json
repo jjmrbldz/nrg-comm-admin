@@ -929,6 +929,10 @@
     "Accredited Settings": "인증 설정",
     "Add/Edit Accredited": "인증 추가/수정",
 
+    "Post Change": "변경 게시",
+    "Company": "회사",
+    "Post Type": "게시 유형",
+
 	"totalPageLang": "전체",
 	"loginError Lang!": "로그인 실패!"
   }

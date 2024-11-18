@@ -286,6 +286,12 @@ export default {
                             route: '/pointsettings'
                             // badge: 2
                         },
+                        {
+                            label: 'Post Change',
+                            icon: 'mdi mdi-note-edit',
+                            route: '/postchange'
+                            // badge: 2
+                        },
                         // {
                         //     label: 'View History',
                         //     icon: 'mdi mdi-eye-refresh',

@@ -185,6 +185,15 @@ const router = createRouter({
       },
       component: () => import('@/views/PoinSettingsView.vue')
     },
+    {
+      path: '/postchange',
+      name: 'postchange',
+      meta: {
+        title: 'Post Change',
+        requiresAuth: true,
+      },
+      component: () => import('@/views/PostChangeView.vue')
+    },
   ]
 })
 

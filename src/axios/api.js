@@ -189,4 +189,9 @@ export const api = {
   updateAccredited  : (data)          => axiosInstance.post('updateaccredited', data),
   addAccredited     : (data)          => axiosInstance.post('createaccredited', data),
   deleteAccredited     : (data)          => axiosInstance.post('deleteaccredited', data),
+
+  // POST CHANGE
+  postChangeList    : (data)          => axiosInstance.post('postchangelist', data),
+  getPostChange     : (data)          => axiosInstance.post('getpostchange', data),
+  updatePostChange  : (data)          => axiosInstance.post('updatepostchange', data),
 };
