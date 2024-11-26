@@ -292,6 +292,12 @@ export default {
                             route: '/postchange'
                             // badge: 2
                         },
+                        {
+                            label: 'Post Trade',
+                            icon: 'mdi mdi-note-edit-outline',
+                            route: '/posttrade'
+                            // badge: 2
+                        },
                         // {
                         //     label: 'View History',
                         //     icon: 'mdi mdi-eye-refresh',

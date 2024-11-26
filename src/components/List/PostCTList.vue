@@ -1,18 +1,18 @@
 <template>
     <div class="grid p-2">
         <div class="formgrid grid">
-            <div class="field col-4">
+            <div class="field col-6">
                 <label>{{ $store.getters['languageStore/translate']('ID') }}</label>
                 <UserSelect v-model="params.user_id" return-value="id" />
             </div>
-            <div class="field col-4">
+            <div class="field col-6">
                 <label>{{ $store.getters['languageStore/translate']('statusLang') }}</label>
                 <StatusSelect2 v-model="params.status" />
             </div>
-            <div class="field col-4">
+            <!-- <div class="field col-4">
                 <label>{{ $store.getters['languageStore/translate']('Post Type') }}</label>
                 <PostTypeSelect v-model="params.post_type" />
-            </div>
+            </div> -->
         </div>
      </div>
     <DataTable :value="list" scrollable class="mt-4" stripedRows :loading="loading">
@@ -126,6 +126,7 @@ import StatusTag from '../GlobalComponents/StatusTag.vue';
 import CategoryFilter from '../Filter/CategoryFilter.vue'
 
 export default {
+    props: ['postType'], // change | trade
     data() {
         return {
             totalRecords: 0,
@@ -134,7 +135,7 @@ export default {
             params: {
                 status      : "", //0, 1, 2
                 user_id     : "",
-                post_type   : "", //change, trade
+                post_type   : this.postType, //change, trade
                 orderby     : 'desc',
                 page        : 1,
                 limit       : 10

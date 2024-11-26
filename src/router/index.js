@@ -194,6 +194,15 @@ const router = createRouter({
       },
       component: () => import('@/views/PostChangeView.vue')
     },
+    {
+      path: '/posttrade',
+      name: 'posttrade',
+      meta: {
+        title: 'Post Trade',
+        requiresAuth: true,
+      },
+      component: () => import('@/views/PostTradeView.vue')
+    },
   ]
 })
 

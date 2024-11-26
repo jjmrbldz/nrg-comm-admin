@@ -1,5 +1,5 @@
 <template>
-    <PostCTList post-type="change" />
+    <PostCTList post-type="trade" />
 </template>
 
 <script>
