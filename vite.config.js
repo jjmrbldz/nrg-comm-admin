@@ -16,7 +16,7 @@ export default defineConfig({
     })
   ],
   build: {
-    outDir: '../../ADMIN/src/dist',
+    // outDir: '../../ADMIN/src/dist',
   },
   resolve: {
     alias: {

@@ -943,6 +943,17 @@
 	"trade": "거래",
 	"All": "모두",
 
+	"Layout": "레이아웃",
+	"User Level": "사용자 레벨",
+	"User Level Comment": "사용자 레벨 댓글",
+	"Post Points": "게시물 포인트",
+	"Comment Points": "댓글 포인트",
+	"Lucky Comment": "운 좋은 댓글",
+	"Lucky Chance": "운 좋은 기회",
+	"Lucky Points": "운 좋은 포인트",
+	"List": "목록",
+	"Grid": "그리드",
+
 	"totalPageLang": "전체",
 	"loginError Lang!": "로그인 실패!"
   }

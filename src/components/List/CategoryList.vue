@@ -24,6 +24,41 @@
                 <StatusTag :status="data.c_status" />
             </template>
         </Column>
+        <Column :header="this.$store.getters['languageStore/translate'](`User Level`)" style="min-width: 100px">
+            <template #body="{ data }">
+                <span>{{ data.c_allowed_user_level }}</span>
+            </template>
+        </Column>
+        <Column :header="this.$store.getters['languageStore/translate'](`User Level Comment`)" style="min-width: 100px">
+            <template #body="{ data }">
+                <YesNoTag :value="data.c_allowed_user_level_comment" />
+            </template>
+        </Column>
+        <Column :header="this.$store.getters['languageStore/translate'](`Post Points`)" style="min-width: 100px">
+            <template #body="{ data }">
+                <span>{{ data.c_post_pts }}</span>
+            </template>
+        </Column>
+        <Column :header="this.$store.getters['languageStore/translate'](`Comment Points`)" style="min-width: 100px">
+            <template #body="{ data }">
+                <span>{{ data.c_comments_pts }}</span>
+            </template>
+        </Column>
+        <Column :header="this.$store.getters['languageStore/translate'](`Lucky Comment`)" style="min-width: 100px">
+            <template #body="{ data }">
+                <YesNoTag :value="data.c_lucky_comment" />
+            </template>
+        </Column>
+        <Column :header="this.$store.getters['languageStore/translate'](`Lucky Chance`)" style="min-width: 100px">
+            <template #body="{ data }">
+                <span>{{ data.c_lucky_pts_chance }}</span>
+            </template>
+        </Column>
+        <Column :header="this.$store.getters['languageStore/translate'](`Lucky Points`)" style="min-width: 100px">
+            <template #body="{ data }">
+                <span>{{ data.c_lucky_pts }}</span>
+            </template>
+        </Column>
         <Column :header="this.$store.getters['languageStore/translate'](`dateRegisteredLang`)" style="min-width: 100px">
             <template #body="{ data }">
                 <span>{{ this.$GF.getDateTime(data.c_reg_datetime) }}</span>
