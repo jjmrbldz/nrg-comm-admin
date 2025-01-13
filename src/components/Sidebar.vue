@@ -292,6 +292,12 @@ export default {
                             route: '/postchange'
                             // badge: 2
                         },
+                        {
+                            label: 'Delay Settings',
+                            icon: 'mdi mdi-history',
+                            route: '/delaysettings'
+                            // badge: 2
+                        },
                         // {
                         //     label: 'Post Trade',
                         //     icon: 'mdi mdi-note-edit-outline',

@@ -203,6 +203,15 @@ const router = createRouter({
       },
       component: () => import('@/views/PostTradeView.vue')
     },
+    {
+      path: '/delaysettings',
+      name: 'delaysettings',
+      meta: {
+        title: 'Delay Settings',
+        requiresAuth: true,
+      },
+      component: () => import('@/views/DelaySettngsView.vue')
+    },
   ]
 })
 

@@ -954,6 +954,10 @@
 	"List": "목록",
 	"Grid": "그리드",
 
+	"Delay Settings": "지연 설정",
+	"Comment Delay": "댓글 지연",
+	"Post Delay": "게시물 지연",
+
 	"totalPageLang": "전체",
 	"loginError Lang!": "로그인 실패!"
   }

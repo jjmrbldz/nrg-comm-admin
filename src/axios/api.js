@@ -194,4 +194,8 @@ export const api = {
   postChangeList    : (data)          => axiosInstance.post('postchangelist', data),
   getPostChange     : (data)          => axiosInstance.post('getpostchange', data),
   updatePostChange  : (data)          => axiosInstance.post('updatepostchange', data),
+
+  // Delay SETTINGS
+  getDelaySettings     : (data)     => axiosInstance.post('getdelaysettings', data),
+  updateDelaySettings  : (data)     => axiosInstance.post('updatedelaysettings', data),
 };
