@@ -958,6 +958,10 @@
 	"Comment Delay": "댓글 지연",
 	"Post Delay": "게시물 지연",
 
+	"Reward Daily": "일일 보상",
+	"Reward Monthly": "월간 보상",
+	"Attendance On/Off": "출석 켜기/끄기",
+
 	"totalPageLang": "전체",
 	"loginError Lang!": "로그인 실패!"
   }

@@ -2,11 +2,26 @@
     <div class="formgrid grid">
         <div class="field col">
             <label>{{ $store.getters['languageStore/translate']('Comment Delay') }}</label>
-            <InputNumber type="name" v-model="params.tc_comment_delay" :use-grouping="false" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" :max="100" class="w-full" :disabled="loading" />
+            <InputNumber type="name" v-model="params.tc_comment_delay" :use-grouping="true" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" :max="100" class="w-full" :disabled="loading" />
         </div>  
         <div class="field col">
             <label>{{ $store.getters['languageStore/translate']('Post Delay') }}</label>
-            <InputNumber type="name" v-model="params.tc_post_delay" :use-grouping="false" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" :max="100" class="w-full" :disabled="loading" />
+            <InputNumber type="name" v-model="params.tc_post_delay" :use-grouping="true" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" :max="100" class="w-full" :disabled="loading" />
+        </div>
+        <Divider>Attendance</Divider>   
+        <div class="field col">
+            <label>{{ $store.getters['languageStore/translate']('Reward Daily') }}</label>
+            <InputNumber type="name" v-model="params.tc_attendance_reward_daily" :use-grouping="true" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" class="w-full" :disabled="loading" />
+        </div>   
+        <div class="field col">
+            <label>{{ $store.getters['languageStore/translate']('Reward Monthly') }}</label>
+            <InputNumber type="name" v-model="params.tc_attendance_reward_monthly" :use-grouping="true" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" class="w-full" :disabled="loading" />
+        </div>   
+        <div class="field col">
+            <label>{{ $store.getters['languageStore/translate']('Attendance On/Off') }}</label>
+            <div class="w-full pt-1">
+                <InputSwitch  v-model="params.tc_attendance_on_off" :true-value="1" :false-value="0" />
+            </div>
         </div>   
         <div class="field col">
             <label>&nbsp;</label>
@@ -23,9 +38,12 @@ export default {
         return {
             loading     : true,
             params: {
-                id      : null,
-                tc_comment_delay     : null,
-                tc_post_delay     : null,
+                id                  : null,
+                tc_comment_delay    : null,
+                tc_post_delay       : null,
+                tc_attendance_reward_daily      : null,
+                tc_attendance_reward_monthly    : null,
+                tc_attendance_on_off            : null,
             },
         }
     },
@@ -38,9 +56,12 @@ export default {
                 if(this.params.id && this.params.tc_comment_delay !== null && this.params.tc_post_delay !== null) {
                     this.loading = true
                     const reqBody = {
-                        id      : this.params.id,
-                        tc_comment_delay     : this.params.tc_comment_delay,
-                        tc_post_delay     : this.params.tc_post_delay,
+                        id                  : this.params.id,
+                        tc_comment_delay    : this.params.tc_comment_delay,
+                        tc_post_delay       : this.params.tc_post_delay,
+                        tc_attendance_reward_daily      : this.params.tc_attendance_reward_daily,
+                        tc_attendance_reward_monthly    : this.params.tc_attendance_reward_monthly,
+                        tc_attendance_on_off            : this.params.tc_attendance_on_off,
                     }
                     const res = await api.updateDelaySettings(reqBody)
 
@@ -76,18 +97,24 @@ export default {
                 } else {
                     this.$GF.customToast(code, this.$store.getters['languageStore/translate'](`${msg}`) ? this.$store.getters['languageStore/translate'](`${msg}`) : msg)
                     this.params = {
-                        id      : null,
-                        tc_comment_delay     : null,
-                        tc_post_delay     : null,
+                        id                  : null,
+                        tc_comment_delay    : null,
+                        tc_post_delay       : null,
+                        tc_attendance_reward_daily      : null,
+                        tc_attendance_reward_monthly    : null,
+                        tc_attendance_on_off            : null,
                     }
                 }
                 
             } catch (error) {
                 console.error(error)
                 this.params = {
-                    id      : null,
-                    tc_comment_delay     : null,
-                    tc_post_delay     : null,
+                    id                  : null,
+                    tc_comment_delay    : null,
+                    tc_post_delay       : null,
+                    tc_attendance_reward_daily          : null,
+                        tc_attendance_reward_monthly    : null,
+                        tc_attendance_on_off            : null,
                 }
                 throw error
             } finally {
