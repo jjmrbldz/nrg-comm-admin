@@ -178,6 +178,46 @@ const GF = {
             return '--:--:--'
         }
     },
+    getMonthWithMostDays(data) {
+        const start = new Date(data.start);
+        const end = new Date(data.end);
+      
+        const monthDays = {}; // Object to store the number of days in each month
+      
+        let current = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+        while (current <= end) {
+          const monthKey = `${current.getFullYear()}-${current.getMonth()}`; // Unique key for each month
+          if (!monthDays[monthKey]) {
+            monthDays[monthKey] = 0;
+          }
+          monthDays[monthKey]++;
+      
+          // Move to the next day
+          current.setDate(current.getDate() + 1);
+        }
+      
+        // Find the month with the most days
+        let maxDays = 0;
+        let maxMonth = null;
+      
+        for (const [monthKey, days] of Object.entries(monthDays)) {
+          if (days > maxDays) {
+            maxDays = days;
+            maxMonth = monthKey;
+          }
+        }
+      
+        // Format the result to return the full month name
+        if (maxMonth) {
+          const [year, month] = maxMonth.split("-");
+          return new Date(year, month);
+        }
+      
+        return null; // Fallback if no month found (shouldn't happen)
+    },
+    formatDate(date, format = 'YYYY-MM-DD HH:mm') {
+        return moment(date).format(format);
+    }
 }
 
 export default GF

@@ -140,3 +140,57 @@ button:disabled {
         display: none;
     }
 }
+
+
+
+.day-cell-content{
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .star-attendance{
+      max-width: 60px;
+    }
+    p {
+        margin: 0 0 4px 0;
+    }
+  }
+  
+  .star-attendance{
+    width: 40px;
+    &.absent{
+      filter: grayscale(1);
+    }
+  }
+  
+  .fc{
+    .fc-daygrid-day-frame{
+      height: 50px;
+    }
+    .fc-daygrid-day-top{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    .fc-daygrid-day-number{
+      width: 100%;
+      padding: 0;
+    }
+    .fc-daygrid-day-events,.fc-daygrid-day-bg{
+      display: none;
+    }
+    .fc-button-primary{
+      color: var(--primary-color-text) !important;
+      background-color: var(--primary-color) !important;
+    }
+  }
+  .fc-theme-standard td, .fc-theme-standard th{
+    border-color: var(--gray-700) !important;
+  }
+  .fc-theme-standard .fc-scrollgrid{
+    border-color: var(--gray-700) !important;
+  }

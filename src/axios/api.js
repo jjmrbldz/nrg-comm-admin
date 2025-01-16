@@ -70,13 +70,14 @@ export const api = {
 
 
   // USER
-  addAdmin        : (data)          => axiosInstance.post('createadmin', data),
-  userList        : (data)          => axiosInstance.post('userlist', data),
-  adminList       : (data)          => axiosInstance.post('adminlist', data),
-  getUser         : (data)          => axiosInstance.post('getuser', data),
-  getAdmin         : (data)          => axiosInstance.post('getadmin', data),
-  updateUser      : (data)          => axiosInstance.post('updateuser', data),
-  updateAdmin      : (data)          => axiosInstance.post('updateadmin', data),
+  addAdmin          : (data)          => axiosInstance.post('createadmin', data),
+  userList          : (data)          => axiosInstance.post('userlist', data),
+  adminList         : (data)          => axiosInstance.post('adminlist', data),
+  getUser           : (data)          => axiosInstance.post('getuser', data),
+  getAdmin          : (data)          => axiosInstance.post('getadmin', data),
+  updateUser        : (data)          => axiosInstance.post('updateuser', data),
+  updateAdmin       : (data)          => axiosInstance.post('updateadmin', data),
+  getUserAttendance : (data)          => axiosInstance.post('getattendance', data),
   
   // CATEGORIES
   categoryList    : (data)          => axiosInstance.post('categorylist', data),

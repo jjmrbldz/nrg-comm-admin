@@ -28,7 +28,8 @@
         </Column>
         <Column :header="this.$store.getters['languageStore/translate'](`actionLang`)" style="min-width: 100px">
             <template #body="{ data }">
-                <UpdateItemButton :updateProps="{itemID: data.id, getAPI: 'getUser', getParams: 'id', modalHeader: 'Add/Edit User', icon: 'mdi mdi-account-edit', modalType: 'AddEditUser', callback: () => getList()}" />
+                <UpdateItemButton class="mr-2" :updateProps="{itemID: data.id, getAPI: 'getUser', getParams: 'id', modalHeader: 'Add/Edit User', icon: 'mdi mdi-account-edit', modalType: 'AddEditUser', callback: () => getList()}" />
+                <ViewAttendanceButton icon="mdi mdi-calendar-check" :username="data.tu_user_id" :user-ID="data.id" />
             </template>
         </Column>
         
@@ -50,6 +51,7 @@ import { defineAsyncComponent } from 'vue';
 import { api } from '@/axios/api';
 import StatusTag from '../GlobalComponents/StatusTag.vue';
 import UserFilter from '../Filter/UserFilter.vue'
+import ViewAttendanceButton from '../Button/ViewAttendanceButton.vue';
 
 export default {
     data() {
@@ -137,7 +139,8 @@ export default {
         },
     },
     components: {
-        UserFilter
+        UserFilter,
+        ViewAttendanceButton,
     }
 }
 </script>

@@ -9,11 +9,12 @@ import {PrimeVueResolver} from 'unplugin-vue-components/resolvers';
 export default defineConfig({
   plugins: [
     vue(),
-    Components({
-      resolvers: [
-        PrimeVueResolver()
-      ]
-    })
+    // Components({
+    //   resolvers: [
+    //     PrimeVueResolver()
+    //   ],
+    //   exclude: ["@/primevue/fullcalendar"]
+    // })
   ],
   build: {
     // outDir: '../../ADMIN/src/dist',

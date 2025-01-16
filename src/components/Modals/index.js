@@ -15,6 +15,7 @@ const MODAL = {
     AddEditPopup : defineAsyncComponent(() => import('./AddEditPopupModal/AddEditPopupModal.vue')),
     ViewPost : defineAsyncComponent(() => import('./ViewPostModal/ViewPostModal.vue')),
     AddEditAccredited : defineAsyncComponent(() => import('./AddEditAccreditedModal/AddEditAccreditedModal.vue')),
+    ViewAttendance : defineAsyncComponent(() => import('./ViewAttendanceModal/ViewAttendance.vue')),
 }
 
 export default MODAL
