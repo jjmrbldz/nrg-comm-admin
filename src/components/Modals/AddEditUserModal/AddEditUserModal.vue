@@ -21,7 +21,6 @@
 
 <script>
 import { api } from '@/axios/api';
-import StatusSelect from '@/components/GlobalComponents/StatusSelect.vue';
 
 export default {
     inject: ['dialogRef'],

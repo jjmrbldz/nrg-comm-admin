@@ -129,6 +129,7 @@ import GF from '@/utils/GlobalFunctions'
 import MODAL from '@/components/Modals'
 
 import StatusTag from '@/components/GlobalComponents/StatusTag.vue'
+import StatusSelect from './components/GlobalComponents/StatusSelect.vue'
 
 const app = createApp(App)
 
@@ -253,6 +254,7 @@ app.component('DeleteItemButton', DeleteItemButton);
 app.component('UpdateItemButton', UpdateItemButton);
 app.component('UpdateStatusButton', UpdateStatusButton);
 app.component('ViewAttendanceButton', ViewAttendanceButton);
+app.component('StatusSelect', StatusSelect);
 
 
 app.config.globalProperties.$GF = GF; // GlobalFunctions.js
