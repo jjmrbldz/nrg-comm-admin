@@ -33,7 +33,9 @@
                     {{ data.title }}
                 </div>
                 <div class="flex gap-1">
-                    <Image :src="`${this.mediaPath}${JSON.parse(data.thumbnail)[0]}`" alt="Image" imageStyle="width: unset; max-height: 34px;" preview />
+                    <template v-if="data.thumbnail">
+                        <Image :src="`${this.mediaPath}${JSON.parse(data.thumbnail ?? '[]')[0] ?? ''}`" alt="Image" imageStyle="width: unset; max-height: 34px;" preview />
+                    </template>
                     <div class="">
                         <StatusTag :status="data.status" />
                     </div>
