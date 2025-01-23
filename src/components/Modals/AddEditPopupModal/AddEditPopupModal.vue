@@ -25,7 +25,7 @@
     <div class="formgrid grid">
         <div class="field col">
             <label>Upload Thumbnail</label>
-            <FileUpload name="files" :multiple="false" accept="image/*" :url="uploadURL" :maxFileSize="4300000" style="height: 100%;" @upload="onUpload($event, false)">
+            <FileUpload name="files" :multiple="false" accept="image/*" :url="uploadURL"  style="height: 100%;" @upload="onUpload($event, false)">
                 <template #empty>
                     <p>Drag and drop files to here to upload.</p>
                 </template>

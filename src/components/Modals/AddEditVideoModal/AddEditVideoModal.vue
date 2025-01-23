@@ -27,7 +27,7 @@
     <div class="formgrid grid">
         <div class="field col">
             <label>Upload Thumbnail</label>
-            <FileUpload :multiple="false" accept="image/*" :maxFileSize="4300000" style="height: 100%;" @select="customChooseCallBack2" @remove="clearThumbUpload" @clear="clearThumbUpload">
+            <FileUpload :multiple="false" accept="image/*"  style="height: 100%;" @select="customChooseCallBack2" @remove="clearThumbUpload" @clear="clearThumbUpload">
                 <template #header="{ chooseCallback, clearCallback, files }">
                     <div class="flex flex-wrap align-items-center flex-1 gap-2">
                             <Button @click="chooseCallback()" icon="pi pi-images" label="Choose file"/>
