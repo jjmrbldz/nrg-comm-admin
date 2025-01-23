@@ -5,7 +5,7 @@
         <span class="username">{{ comment.tu_user_id }}</span>
         <span class="timestamp">{{ formatDate(comment.p_reg_datetime) }}</span>
       </div>
-      <div class="comment-content">
+      <div class="comment-content mt-2">
         {{ comment.p_content }}
       </div>
       <div class="comment-children" v-if="comment.children && comment.children.length">

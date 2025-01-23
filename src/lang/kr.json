@@ -961,6 +961,8 @@
 	"Reward Daily": "일일 보상",
 	"Reward Monthly": "월간 보상",
 	"Attendance On/Off": "출석 켜기/끄기",
+	
+	"Allowed Level": "허용 레벨",
 
 	"totalPageLang": "전체",
 	"loginError Lang!": "로그인 실패!"

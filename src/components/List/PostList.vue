@@ -34,7 +34,10 @@
                 </div>
                 <div class="flex gap-1">
                     <template v-if="data.thumbnail">
-                        <Image :src="`${this.mediaPath}${JSON.parse(data.thumbnail ?? '[]')[0] ?? ''}`" alt="Image" imageStyle="width: unset; max-height: 34px;" preview />
+                        <Image :src="`${this.mediaPath}${JSON.parse(data.thumbnail)[0]}`" alt="Image" imageStyle="width: unset; max-height: 34px;" preview />
+                    </template>
+                    <template v-else>
+                        <Image :src="`${this.mediaPath}${JSON.parse(data.media)[0]}`" alt="Image" imageStyle="width: unset; max-height: 34px;" preview />
                     </template>
                     <div class="">
                         <StatusTag :status="data.status" />
@@ -52,17 +55,25 @@
         <Column :header="$store.getters['languageStore/translate']('Statistics')" style="min-width: 100px">
             <template #body="{ data }">
                 <div class="">
-                    <div class="flex">
-                        <i class="mdi mdi-eye mr-2 text-color-secondary"></i>
-                        <span>{{ data.view_count }}</span>
+                    <div class="flex gap-1">
+                        <div class="flex">
+                            <i class="mdi mdi-eye mr-2 text-color-secondary"></i>
+                            <span>{{ data.view_count }}</span>
+                        </div>
+                        <div class="flex">
+                            <i class="mdi mdi-comment mr-2 text-color-secondary"></i>
+                            <span>{{ data.comment_count }}</span>
+                        </div>
                     </div>
-                    <div class="flex">
-                        <i class="mdi mdi-thumb-up mr-2 text-blue-500"></i>
-                        <span>{{ data.like_count }}</span>
-                    </div>
-                    <div class="flex">
-                        <i class="mdi mdi-thumb-down mr-2 text-red-500"></i>
-                        <span>{{ data.dislike_count ? data.dislike_count : '0' }}</span>
+                    <div class="flex gap-1">
+                        <div class="flex">
+                            <i class="mdi mdi-thumb-up mr-2 text-blue-500"></i>
+                            <span>{{ data.like_count }}</span>
+                        </div>
+                        <div class="flex">
+                            <i class="mdi mdi-thumb-down mr-2 text-red-500"></i>
+                            <span>{{ data.dislike_count ? data.dislike_count : '0' }}</span>
+                        </div>
                     </div>
                 </div>
             </template>

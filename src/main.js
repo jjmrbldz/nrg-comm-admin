@@ -132,6 +132,7 @@ import StatusTag from '@/components/GlobalComponents/StatusTag.vue'
 import StatusSelect from './components/GlobalComponents/StatusSelect.vue'
 import CategorySelect from './components/GlobalComponents/CategorySelect.vue'
 import SubCategorySelect from './components/GlobalComponents/SubCategorySelect.vue'
+import CommentSection from './components/List/CommentSection.vue'
 
 const app = createApp(App)
 
@@ -259,6 +260,7 @@ app.component('ViewAttendanceButton', ViewAttendanceButton);
 app.component('StatusSelect', StatusSelect);
 app.component('CategorySelect', CategorySelect);
 app.component('SubCategorySelect', SubCategorySelect);
+app.component('CommentSection', CommentSection);
 
 
 app.config.globalProperties.$GF = GF; // GlobalFunctions.js

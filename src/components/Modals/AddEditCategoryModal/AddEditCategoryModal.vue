@@ -22,6 +22,10 @@
         <Dropdown class="w-full" v-model="params.c_layout" :options="layoutOptions" optionLabel="label" optionValue="value" />
     </div>  
     <div class="field">
+        <label>{{ $store.getters['languageStore/translate']('Allowed Level') }}</label>
+        <InputNumber id="post-points" v-model="params.c_allowed_view_level" :min-fraction-digits="0" :max-fraction-digits="0" :min="1" class="w-full" :disabled="loading" />
+    </div>  
+    <div class="field">
         <label>{{ $store.getters['languageStore/translate']('Post Points') }}</label>
         <InputNumber id="post-points" v-model="params.c_post_pts" :min-fraction-digits="0" :max-fraction-digits="0" :min="1" class="w-full" :disabled="loading" />
     </div>  
@@ -74,6 +78,7 @@ export default {
                 c_lucky_comment     : null, // 1 or 0 true or false,
                 c_lucky_pts_chance  : null, // 1 - 100
                 c_lucky_pts         : null, //1 - 100
+                c_allowed_view_level: null, //user level
                 c_allowed_user_level: null, //user level
                 c_allowed_user_level_comment     : null, // 1 or 0 true or false,
             },
@@ -112,6 +117,7 @@ export default {
             this.params.c_lucky_pts = this.formData.c_lucky_pts
             this.params.c_allowed_user_level = this.formData.c_allowed_user_level
             this.params.c_allowed_user_level_comment = this.formData.c_allowed_user_level_comment
+            this.params.c_allowed_view_level = this.formData.c_allowed_view_level
             // this.params.cat_sort        = this.formData.cat_sort
             // this.params.cat_sort_old    = this.formData.cat_sort
         }
