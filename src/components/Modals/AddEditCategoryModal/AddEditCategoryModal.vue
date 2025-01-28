@@ -26,6 +26,14 @@
         <InputNumber id="post-points" v-model="params.c_allowed_view_level" :min-fraction-digits="0" :max-fraction-digits="0" :min="1" class="w-full" :disabled="loading" />
     </div>  
     <div class="field">
+        <label>{{ $store.getters['languageStore/translate']('Home Page Count') }}</label>
+        <InputNumber id="post-points" v-model="params.c_homepage_count" :min-fraction-digits="0" :max-fraction-digits="0" :min="1" class="w-full" :disabled="loading" />
+    </div>  
+    <div class="field">
+        <label>{{ $store.getters['languageStore/translate']('Single Page Count') }}</label>
+        <InputNumber id="post-points" v-model="params.c_singlepage_count" :min-fraction-digits="0" :max-fraction-digits="0" :min="1" class="w-full" :disabled="loading" />
+    </div>  
+    <div class="field">
         <label>{{ $store.getters['languageStore/translate']('Post Points') }}</label>
         <InputNumber id="post-points" v-model="params.c_post_pts" :min-fraction-digits="0" :max-fraction-digits="0" :min="1" class="w-full" :disabled="loading" />
     </div>  
@@ -81,6 +89,8 @@ export default {
                 c_allowed_view_level: null, //user level
                 c_allowed_user_level: null, //user level
                 c_allowed_user_level_comment     : null, // 1 or 0 true or false,
+                c_homepage_count     : null,
+                c_singlepage_count     : null,
             },
             layoutOptions: [
                 {label: this.$store.getters['languageStore/translate']('Grid'), value: 'grid'},
@@ -118,6 +128,8 @@ export default {
             this.params.c_allowed_user_level = this.formData.c_allowed_user_level
             this.params.c_allowed_user_level_comment = this.formData.c_allowed_user_level_comment
             this.params.c_allowed_view_level = this.formData.c_allowed_view_level
+            this.params.c_homepage_count = this.formData.c_homepage_count
+            this.params.c_singlepage_count = this.formData.c_singlepage_count
             // this.params.cat_sort        = this.formData.cat_sort
             // this.params.cat_sort_old    = this.formData.cat_sort
         }

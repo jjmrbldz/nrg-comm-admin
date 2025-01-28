@@ -964,6 +964,9 @@
 	
 	"Allowed Level": "허용 레벨",
 
+	"Home Page Count": "홈페이지 수",
+	"Single Page Count": "단일 페이지 수",
+
 	"totalPageLang": "전체",
 	"loginError Lang!": "로그인 실패!"
   }
