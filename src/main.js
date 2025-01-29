@@ -133,6 +133,10 @@ import StatusSelect from './components/GlobalComponents/StatusSelect.vue'
 import CategorySelect from './components/GlobalComponents/CategorySelect.vue'
 import SubCategorySelect from './components/GlobalComponents/SubCategorySelect.vue'
 import CommentSection from './components/List/CommentSection.vue'
+import UserFilter2 from './components/Filter/UserFilter2.vue'
+import UserFilter from './components/Filter/UserFilter.vue'
+import StatusSelect2 from './components/GlobalComponents/StatusSelect2.vue'
+import UserSelect from './components/GlobalComponents/UserSelect.vue'
 
 const app = createApp(App)
 
@@ -261,6 +265,10 @@ app.component('StatusSelect', StatusSelect);
 app.component('CategorySelect', CategorySelect);
 app.component('SubCategorySelect', SubCategorySelect);
 app.component('CommentSection', CommentSection);
+app.component('UserFilter2', UserFilter2);
+app.component('UserFilter', UserFilter);
+app.component('StatusSelect2', StatusSelect2);
+app.component('UserSelect', UserSelect);
 
 
 app.config.globalProperties.$GF = GF; // GlobalFunctions.js
