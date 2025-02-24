@@ -34,10 +34,10 @@
                 </div>
                 <div class="flex gap-1">
                     <template v-if="data.thumbnail">
-                        <Image :src="`${this.mediaPath}${JSON.parse(data.thumbnail)[0]}`" alt="Image" imageStyle="width: unset; max-height: 34px;" preview />
+                        <Image :src="`${this.mediaPath}${data.thumbnail ? JSON.parse(data.thumbnail)[0] : undefined}`" alt="Image" imageStyle="width: unset; max-height: 34px;" preview />
                     </template>
                     <template v-else>
-                        <Image :src="`${this.mediaPath}${JSON.parse(data.media)[0]}`" alt="Image" imageStyle="width: unset; max-height: 34px;" preview />
+                        <Image :src="`${this.mediaPath}${data.media ? JSON.parse(data.media)[0] : undefined}`" alt="Image" imageStyle="width: unset; max-height: 34px;" preview />
                     </template>
                     <div class="">
                         <StatusTag :status="data.status" />
@@ -85,7 +85,7 @@
         </Column>
         <Column :header="this.$store.getters['languageStore/translate'](`actionLang`)" style="min-width: 100px">
             <template #body="{ data }">
-                <UpdateItemButton :updateProps="{itemID: data.event_id, getAPI: 'getPost', getParams: 'id', modalHeader: 'View Post', icon: 'mdi mdi-eye', modalType: 'ViewPost', callback: () => getList(), totalItems: totalRecords, width: '50vw'}" />
+                <UpdateItemButton :updateProps="{itemID: data.event_id, getAPI: 'getPost', getParams: 'id', modalHeader: 'View Post', icon: 'mdi mdi-eye', modalType: 'ViewPost', totalItems: totalRecords, width: '50vw'}" />
             </template>
         </Column>
         

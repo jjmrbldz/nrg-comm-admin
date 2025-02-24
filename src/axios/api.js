@@ -78,6 +78,7 @@ export const api = {
   updateUser        : (data)          => axiosInstance.post('updateuser', data),
   updateAdmin       : (data)          => axiosInstance.post('updateadmin', data),
   getUserAttendance : (data)          => axiosInstance.post('getattendance', data),
+  getBingoCards     : (data)          => axiosInstance.post('getbinggocards', data),
   
   // CATEGORIES
   categoryList    : (data)          => axiosInstance.post('categorylist', data),
@@ -172,6 +173,12 @@ export const api = {
   getInquiry        : (data)      => axiosInstance.post('getinquiry', data),
   sendInquiry       : (data)      => axiosInstance.post('sendinquiry', data),
   replyInquiry      : (data)      => axiosInstance.post('replyinquiry', data),
+
+  // ROULETTE
+  createRoulette    : (data)      => axiosInstance.post('createroulette', data),
+  updateRoulette    : (data)      => axiosInstance.post('updateroulette', data),
+  getRoulette       : (data)      => axiosInstance.post('getroulette', data),
+  getRouletteList   : (data)      => axiosInstance.post('roulettelist', data),
 
 
   // LOGS

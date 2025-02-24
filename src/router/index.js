@@ -69,6 +69,15 @@ const router = createRouter({
       component: () => import('@/views/UserListView.vue')
     },
     {
+      path: '/user/bingolist',
+      name: 'bingolist',
+      meta: {
+        title: 'Bingo List',
+        requiresAuth: true,
+      },
+      component: () => import('@/views/BingoListView.vue')
+    },
+    {
       path: '/admin',
       name: 'admin',
       meta: {
@@ -211,6 +220,15 @@ const router = createRouter({
         requiresAuth: true,
       },
       component: () => import('@/views/DelaySettngsView.vue')
+    },
+    {
+      path: '/roulette',
+      name: 'roulette',
+      meta: {
+        title: 'Roulette List',
+        requiresAuth: true,
+      },
+      component: () => import('@/views/RouletteListView.vue')
     },
   ]
 })

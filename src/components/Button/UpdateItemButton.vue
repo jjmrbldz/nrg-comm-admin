@@ -1,5 +1,5 @@
 <template>
-    <Button :icon="this.updateProps.icon" @click="updateItem()" />
+    <Button :icon="this.updateProps.icon" @click="updateItem()" :loading="loading" />
 </template>
 
 <script>
@@ -19,9 +19,15 @@ export default {
         }
         */
     },
+    data() {
+        return {
+            loading: false
+        }
+    },
     methods: {
         async updateItem() {
             console.log(this.updateProps);
+            this.loading = true;
             let params = {};
             try {
                 if(typeof this.updateProps.getParams === 'string') {
@@ -67,6 +73,8 @@ export default {
             } catch(error) {
                 console.error(error)
                 throw error
+            } finally {
+                this.loading = false;
             }
         },
     }

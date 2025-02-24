@@ -966,6 +966,20 @@
 
 	"Home Page Count": "홈페이지 수",
 	"Single Page Count": "단일 페이지 수",
+	"Type": "타입",
+	"Name": "이름",
+	"Amount": "보유금액",
+	"Chance": "기회",
+	"Bingo List": "빙고 목록",
+	"Finished": "완료",
+	"In Progress": "진행 중",
+	"Level": "레벨",
+	"Roulette List": "룰렛 목록",
+	"Roulette Management": "룰렛 관리",
+	"Roulette Content": "룰렛 콘텐츠",
+	"Days Valid": "유효 기간",
+	"Points": "포인트",
+	"Coupon": "쿠폰",
 
 	"totalPageLang": "전체",
 	"loginError Lang!": "로그인 실패!"

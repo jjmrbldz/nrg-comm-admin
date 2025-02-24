@@ -166,6 +166,11 @@ export default {
                             route: '/user'
                         },
                         {
+                            label: 'Bingo List',
+                            icon: 'pi pi-table',
+                            route: '/user/bingolist'
+                        },
+                        {
                             label: 'Admin List',
                             icon: 'mdi mdi-shield-account',
                             route: '/admin'
@@ -175,6 +180,19 @@ export default {
                         //     icon: 'pi pi-user',
                         //     badge: 2
                         // },
+                    ]
+                },
+                {
+                    separator: true
+                },
+                {
+                    label: 'Roulette Management',
+                    items: [
+                        {
+                            label: 'Roulette List',
+                            icon: 'mdi mdi-ship-wheel',
+                            route: '/roulette'
+                        }
                     ]
                 },
                 {
