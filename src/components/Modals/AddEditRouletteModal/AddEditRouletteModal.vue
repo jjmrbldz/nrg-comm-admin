@@ -40,7 +40,12 @@
                     </div>
                 </div>
             </div>
-            <div class="field col-4">
+            <div v-if="item.trc_type === 'Level'" class="field col-4">
+                <label>{{ $store.getters['languageStore/translate']('Level') }}</label>
+                
+                <Dropdown v-model="item.trc_amount" :options="levelOptions" optionLabel="label" optionValue="value" placeholder="Select level" checkmark :highlightOnSelect="false" class="w-full"/>
+            </div>
+            <div v-else class="field col-4">
                 <label>{{ $store.getters['languageStore/translate']('Amount') }}</label>
                 <InputNumber v-model="item.trc_amount" :use-grouping="true" :min-fraction-digits="0" :max-fraction-digits="0" :min="0" :max="99999999999" class="w-full" />
             </div>
@@ -141,7 +146,23 @@ export default {
             statusOptions: [
                 { label: this.$store.getters['languageStore/translate']('Inactive'), value: 0},
                 { label: this.$store.getters['languageStore/translate']('Active'), value: 1},
+            ],
+            levelOptions: [
+                { label: '1', value: 1},
+                { label: '2', value: 2},
+                { label: '3', value: 3},
+                { label: '4', value: 4},
+                { label: '5', value: 5},
+                { label: '6', value: 6},
+                { label: '7', value: 7},
+                { label: '8', value: 8},
+                { label: '9', value: 9},
             ]
+        }
+    },
+    watch: {
+        'params.tr_content'(newVal, oldVal) {
+
         }
     },
     computed: {

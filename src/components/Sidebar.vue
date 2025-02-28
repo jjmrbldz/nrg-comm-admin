@@ -192,6 +192,11 @@ export default {
                             label: 'Roulette List',
                             icon: 'mdi mdi-ship-wheel',
                             route: '/roulette'
+                        },
+                        {
+                            label: 'Roulette Logs List',
+                            icon: 'mdi mdi-invoice-list-outline',
+                            route: '/roulettelogs'
                         }
                     ]
                 },

@@ -179,6 +179,7 @@ export const api = {
   updateRoulette    : (data)      => axiosInstance.post('updateroulette', data),
   getRoulette       : (data)      => axiosInstance.post('getroulette', data),
   getRouletteList   : (data)      => axiosInstance.post('roulettelist', data),
+  getRouletteLogsList: (data)      => axiosInstance.post('roulettelogslist', data),
 
 
   // LOGS

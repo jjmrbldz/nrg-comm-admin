@@ -230,6 +230,15 @@ const router = createRouter({
       },
       component: () => import('@/views/RouletteListView.vue')
     },
+    {
+      path: '/roulettelogs',
+      name: 'roulettelogs',
+      meta: {
+        title: 'Roulette Logs List',
+        requiresAuth: true,
+      },
+      component: () => import('@/views/RouletteLogsListView.vue')
+    },
   ]
 })
 
